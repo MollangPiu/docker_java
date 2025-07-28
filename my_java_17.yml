@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  springboot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-spring
+    container_name: springboot_app
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
